@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "netflix_clone_backend": {
+      "main": "src/netflix_clone_backend/main.mo",
+      "type": "motoko"
+    },
+    "netflix_clone_frontend": {
+      "dependencies": [
+        "netflix_clone_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/netflix_clone_frontend/src/index.html"
+      },
+      "source": [
+        "src/netflix_clone_frontend/assets",
+        "dist/netflix_clone_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
